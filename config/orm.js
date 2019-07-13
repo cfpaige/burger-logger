@@ -7,7 +7,7 @@ function printQuestionMarks(num) {
     arr.push("?");
   }
   return arr.toString();
-}
+};
 
 function objToSql(ob) {
   var arr = [];
@@ -22,7 +22,7 @@ function objToSql(ob) {
     }
   }
   return arr.toString();
-}
+};
 
 var orm = {
   all: function (tableInput, cb) {
@@ -57,18 +57,17 @@ var orm = {
 
   update: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
-
     queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
 
     console.log(queryString);
+
     connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   }

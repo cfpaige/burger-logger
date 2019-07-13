@@ -1,5 +1,7 @@
 var express = require("express");
 
+var methodOverride = require("method-override");
+
 var PORT = process.env.PORT || 8080;
 
 var app = express();
@@ -10,6 +12,9 @@ app.use(express.static("public"));
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Allow use of methods other than GET and POST in HTTP:
+app.use(methodOverride('_method'));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
