@@ -31,12 +31,7 @@ router.put("/burgers/update/:id", function (req, res) {
     devoured: req.body.devoured
   }, condition, function (result) {
     res.redirect("/burgers");
-    // if (result.changedRows === 0) {
-    //   return res.status(404).end();
-    // }
-    // res.status(200).end();
-  }
-  )
+  })
 });
 
 module.exports = router;

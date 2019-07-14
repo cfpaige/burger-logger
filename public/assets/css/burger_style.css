@@ -1,16 +1,23 @@
 body {
   background-image: url(../img/blackboard.jpg);
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 1.5em;
   color: #ffffff;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 90%;
   margin: 0 auto;
   display: flex;
 }
 
-label {
-  padding: 0 0.5em 0 0;
+h2 {
+  text-align: center;
+}
+
+#new-order {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #add-burger {
@@ -28,3 +35,19 @@ label {
 .burger-name {
   padding: 0.5em 0;
 }
+
+#burger-image {
+  box-sizing: border-box;
+  display: block;
+  height: 25em;
+  background-image: url("../img/burger.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
+#enter-name {
+  background-color: darkgray;
+}
+
+
+/* <img src="../public/assets/img/burger.png" height="25em" alt="Chalk-Drawn Burger"> */
